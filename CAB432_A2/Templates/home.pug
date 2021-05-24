@@ -1,0 +1,61 @@
+<!--HTML Document for our Home Page-->
+doctype html
+html(lang="en")
+  head
+    //- Setting the style of the webpage (backgrounds, fonts etc)
+    style. 
+      body {
+        color: white;
+        background-color: #1DA1F3;
+        text-align: center;
+      }
+      p {
+        color: white;                
+      }
+
+    //-Implementing Pug 
+    title= pageTitle
+
+
+  
+  //-Contents of our page:
+  body
+    mixin img-bg(src, alt)
+      img.img-bg(
+        src=src,
+        style=`background-image: url('${src}')`,
+        alt=alt
+      )&attributes(attributes)
+
+    figure
+      +img-bg(
+      "https://pbs.twimg.com/profile_images/1308010958862905345/-SGZioPb_400x400.jpg"
+    )(class="additional-class")
+
+    font(face='Courier New' size='20') Welcome to Twitter Feed!
+    br
+    br
+    font(face='Times New Roman' size='4') Enter a hashtag to begin streaming!
+    br
+    br
+      
+    #container.col
+    <form action="/index" method="get">
+      <input type= 'text' name= 'word'/>
+      <button type="submit">Search!</button>
+    </form>
+
+      p.
+      font(face='Times New Roman' size='4') Have fun!
+      
+
+      
+      
+
+    
+
+      
+      
+      
+        
+        

@@ -1,0 +1,11 @@
+2 Terminals, One with 2020 Twitter, and the other with Wanngi Public. 
+
+Wanngi: cd into public and:
+cd Desktop/Wanngi/public
+node app.js
+Server is lsitening on port 1000
+
+Cloud:
+cd Desktop/2020UNI/CAB432/CAB432_A2
+node server.js
+port 8000.

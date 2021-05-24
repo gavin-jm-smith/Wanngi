@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>    
+    <style>
+        body{background: skyblue; font-family: verdana; color: #fff; padding: 30px;}
+        h1{font-size: 48px; text-transform: uppercase; letter-spacing: 2px; text-align: center;}
+        p{font-size: 16px; text-align: center;}
+        input {
+          background-color: #000000; /* White */
+          border: none;
+          color: white;
+          padding: 20px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+          border-radius: 4px;
+        }
+    </style>
+  </head>
+  
+  <body>
+      <h1>Welcome, everyone</h1>
+      <p>Click the button below!</p>
+      <p><input id="button" value = "Watch Me Change" style= "color:white" onclick="setColor('button', '#101010')";/></p>       
+      <script>
+        var count = 1;
+        function setColor(btn, color, value) {
+          var property = document.getElementById(btn);
+          if (count == 0) {
+              property.style.backgroundColor = "#33FF84"
+              property.value ="Green"
+              count++;        
+          }
+
+          else if(count == 1) {
+              property.style.backgroundColor = "#FF5733"
+              property.value ="Orange"
+              count++;
+          }
+
+          else if(count == 2) {
+              property.style.backgroundColor = "#3338FF"
+              property.value ="Blue"
+              count++;
+          }
+
+          else{
+            property.style.backgroundColor = "#FF3373"
+            property.value ="Red"
+            count=0;
+          }
+      }
+      </script>      
+   </body>
+</html>

@@ -1,0 +1,10 @@
+Instructions:
+
+cd into this directory, where 'server.js' is stored. 
+
+cmd: node server.js
+
+navigate to:
+http://localhost:8000/
+
+Enjoy the application.

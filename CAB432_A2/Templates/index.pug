@@ -1,0 +1,118 @@
+<!--HTML Document for our Action Page-->
+doctype html
+html(lang="en")
+  head
+    //- Setting the style of the webpage (backgrounds, fonts etc)     
+    style. 
+      body {      
+        background-color: #1DA1F3;        
+        text-align: center;
+        display: block;
+      }    
+
+      div#content {
+        height: 500px;
+        overflow: scroll;            
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        font-family: sans-serif;
+        min-width: 400px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      }
+
+      div#content 
+        thead tr {
+          background-color: #009879;
+          color: #ffffff;
+          text-align: center;
+      }
+
+      div#content 
+        th, 
+        td {
+          padding: 12px 15px;
+        }
+      
+      div#content
+        tbody
+          tr {
+            border-bottom: 1px solid #dddddd;
+          }
+
+        tbody 
+          tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+          }
+        tbody 
+        tr:nth-of-type(odd) {
+          background-color: white;
+        }
+        tbody
+          tr:last-of-type {
+            border-bottom: 2px solid #009879;
+          }
+        tbody 
+          tr.active-row {
+            font-weight: bold;
+            color: #009879;
+          }
+
+     
+     //-Implementing Pug
+    title= pageTitle
+    script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/web-socket-js/1.0.0/web_socket.min.js').
+    script(type='text/javascript', src='https://code.jquery.com/jquery-3.5.1.js')
+    script(type='text/javascript', src='/script.js'). 
+
+  //-Contents of our page:
+  
+  
+  body
+    p.
+    font(face='Times New Roman' size='8' style="color:white") Displaying all tweets for  '#{query}':  
+    div#content
+      table
+        thead
+          tr
+            th Picture
+            th Author
+            th Tweet
+            th Sentiment
+        tbody#tweets
+
+    br
+    #container.col
+    <form action="/index" method="get">
+      <input type= 'text' name= 'word'/>
+      <button type="submit">Search!</button>
+    </form>
+
+    #container
+    <input  id="stop" type="button" value="Stop Feed">
+
+      //- button#stop(text='Stop')
+      
+
+ 
+
+
+    
+
+  
+
+      
+      
+
+  
+
+
+    
+  
+
+
+      
+
+
+
+
